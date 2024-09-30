@@ -1,0 +1,20 @@
+.notification-container {
+  position: fixed;
+  bottom: 20px; /* Ubicación en la parte inferior */
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaciado entre las alertas */
+  z-index: 1000;
+  max-width: 300px; /* Ancho máximo para las notificaciones */
+}
+
+.notification {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.notification.hide {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none; /* Evita que interactúen cuando están ocultas */
+}
